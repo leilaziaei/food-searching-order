@@ -1,6 +1,1 @@
 node_modules/
-.env
-.env.*
-!.env.example
-build/
-.DS_Store
