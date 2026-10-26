@@ -373,7 +373,7 @@ function manageAuth() {
       <div class="user-menu-container">
 
         <img
-          src="/public/images/user-icon.png"
+          src="images/user-icon.png"
           id="userIcon"
           class="user-icon"
           alt="User Icon"
