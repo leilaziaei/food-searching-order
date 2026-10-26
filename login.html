@@ -1,0 +1,72 @@
+
+<!-- login.html -->
+
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ورود</title>
+
+    <!-- <link rel="stylesheet" href="./webfonts/iransans-web/iransans.css" /> -->
+
+   <link rel="stylesheet" href="/src/style.css">
+   <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body
+    class="min-h-screen m-0 flex flex-col items-center justify-center bg-[#f4f7f6] font-[IRANSans-web] rtl"
+    dir="rtl"
+  >
+    <h2 class="text-center text-[#333] text-3xl mb-5">
+      ورود
+    </h2>
+
+    <div
+      id="notification"
+      class="hidden"
+    ></div>
+
+    <form
+      id="loginForm"
+      class="bg-white rounded-[10px] shadow-[rgba(0,0,0,0.1)_0px_4px_12px] p-8 w-full max-w-[400px] text-center"
+    >
+      <input
+        type="text"
+        id="username"
+        placeholder="نام کاربری"
+        required
+        class="w-full p-[15px] mb-4 border border-[#ddd] rounded-[5px] text-xs box-border bg-[#f4f7f6] font-[IRANSans-web] outline-none focus:border-[#4caf50] focus:shadow-[0_0_5px_rgba(0,128,0,0.3)]"
+      />
+
+      <input
+        type="password"
+        id="password"
+        placeholder="رمز عبور"
+        required
+        class="w-full p-[15px] mb-4 border border-[#ddd] rounded-[5px] text-xs box-border bg-[#f4f7f6] font-[IRANSans-web] outline-none focus:border-[#4caf50] focus:shadow-[0_0_5px_rgba(0,128,0,0.3)]"
+      />
+
+      <button
+        type="submit"
+        class="w-full p-[15px] bg-[#4caf50] hover:bg-[#45a049] text-white border-none rounded-[5px] text-base cursor-pointer transition-colors duration-300 font-[IRANSans-web]"
+      >
+        ورود
+      </button>
+    </form>
+
+    <p class="mt-[15px] text-base text-center">
+      حساب ندارید؟
+      <a
+        href="register.html"
+        class="text-[#4caf50] no-underline font-bold hover:underline"
+      >
+        ثبت‌نام
+      </a>
+    </p>
+
+    <script src="src/js/login.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+/* فقط مواردی که Tailwind به‌تنهایی برایشان مناسب نیست */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+option {
+  direction: rtl;
+}
+
+td {
+  direction: rtl;
+}
+
+.meal-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* .modal {
+  display: none;
+} */
+
+/* #checkoutButton {
+  display: none;
+} */
+
+/* rigester and login  */
+#notification {
+  position: fixed;
+  top: 60px;
+  right: 20px;
+  background-color: #28a745;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  z-index: 1000;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: none; /* مخفی به‌طور پیش‌فرض */
+}
+
+#notification.show {
+  display: block;
+}
+
+#notification.error {
+  background-color: #dc3545; /* رنگ قرمز برای خطاها */
+}
+
+/* سبک‌دهی به آیکون کاربر */
+.user-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* منوی کاربر کوچک زیر آیکون */
+.user-menu-container {
+  position: relative;
+  display: flex;
+}
+
+.user-menu {
+  position: absolute;
+  top: 30px;
+  left: 50%; /* موقعیت‌دهی به سمت وسط */
+  transform: translateX(-50%); /* در حالت بسته، اندازه منو کوچک می‌شود */
+
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  min-width: 150px;
+  z-index: 1;
+  padding: 1rem;
+  border: 1px solid rgba(58, 61, 66, 0.06);
+  border-radius: 0.75rem;
+  /* box-shadow: rgba(58, 61, 66, 0.06) 0px 1px 0px, rgba(0, 0, 0, 0.05) 0px 2px 8px -2px; */
+}
+
+.user-menu p {
+  margin: 0 0 10px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+.user-menu svg{
+  width: 20px;
+  height: 20px;
+  color: #333;
+  display: inline-block;
+  margin-left: 10px;
+}
+.user-menu button {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+
+.user-menu button:hover {
+  color: #ff00a6;
+}
