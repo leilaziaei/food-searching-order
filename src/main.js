@@ -457,7 +457,7 @@ function manageAuth() {
       >
 
         <a
-          href="/food-searching-order/login.html"
+          href="./login.html"
           class="hover:text-pink-500"
         >
           ورود
@@ -466,7 +466,7 @@ function manageAuth() {
         <span>|</span>
 
         <a
-          href="/food-searching-order/register.html"
+          href="./register.html"
           class="hover:text-pink-500"
         >
           ثبت نام
