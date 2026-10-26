@@ -5,7 +5,7 @@
 
 // https://www.themealdb.com/api/json/v1/1/
 // https://www.themealdb.com/api/json/v1/1/search.php?s=
-
+import "./style.css";
 // fetch API
 const apiURL = "https://www.themealdb.com/api/json/v1/1/";
 
