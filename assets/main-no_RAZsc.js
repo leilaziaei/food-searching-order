@@ -1,4 +1,4 @@
-(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),t.credentials=e.crossOrigin===`use-credentials`?`include`:e.crossOrigin===`anonymous`?`omit`:`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();var e=`https://www.themealdb.com/api/json/v1/1/`,t=[];function n(e){return e.map(e=>(e.price=Math.floor(Math.random()*61)+10,e))}async function r(e){try{let r=await(await fetch(`${e}search.php?s=`)).json();return t=n(r.meals||[]),a(t),r}catch(e){console.error(`Error fetching meals:`,e)}}function i(e){let t=[`۰`,`۱`,`۲`,`۳`,`۴`,`۵`,`۶`,`۷`,`۸`,`۹`];return e.toString().replace(/\d/g,e=>t[e])}function a(e){let t=document.querySelector(`#mealList`);t.innerHTML=``,e.forEach(e=>{let n=`
+import"./style-BXThLmaq.js";var e=`https://www.themealdb.com/api/json/v1/1/`,t=[];function n(e){return e.map(e=>(e.price=Math.floor(Math.random()*61)+10,e))}async function r(e){try{let r=await(await fetch(`${e}search.php?s=`)).json();return t=n(r.meals||[]),a(t),r}catch(e){console.error(`Error fetching meals:`,e)}}function i(e){let t=[`۰`,`۱`,`۲`,`۳`,`۴`,`۵`,`۶`,`۷`,`۸`,`۹`];return e.toString().replace(/\d/g,e=>t[e])}function a(e){let t=document.querySelector(`#mealList`);t.innerHTML=``,e.forEach(e=>{let n=`
       <div
         class="meal mb-8 flex h-[300px] w-full cursor-pointer flex-col items-center justify-between overflow-hidden rounded-lg border border-[rgba(58,61,66,0.06)] bg-white pb-6 text-center shadow-md transition duration-200 ease-out hover:shadow-xl"
       >
@@ -126,7 +126,7 @@
       <div class="user-menu-container">
 
         <img
-          src="/public/images/user-icon.png"
+          src="images/user-icon.png"
           id="userIcon"
           class="user-icon"
           alt="User Icon"
@@ -193,7 +193,7 @@
       >
 
         <a
-          href="login.html"
+          href="./login.html"
           class="hover:text-pink-500"
         >
           ورود
@@ -202,7 +202,7 @@
         <span>|</span>
 
         <a
-          href="register.html"
+          href="./register.html"
           class="hover:text-pink-500"
         >
           ثبت نام

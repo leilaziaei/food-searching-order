@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ثبت‌نام</title>
+
+    <!-- <link rel="stylesheet" href="./webfonts/iransans-web/iransans.css" /> -->
+
+   <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script type="module" crossorigin src="/food-searching-order/assets/register-CWwNQJew.js"></script>
+    <link rel="modulepreload" crossorigin href="/food-searching-order/assets/style-BXThLmaq.js">
+    <link rel="stylesheet" crossorigin href="/food-searching-order/assets/style-BAtD_cl4.css">
+  </head>
+
+  <body
+   class="min-h-screen m-0 flex flex-col items-center justify-center bg-[#f4f7f6] font-[IRANSans-web] rtl"
+    dir="rtl"
+  >
+    <h2 class="mb-5 text-center text-3xl text-[#333]">
+      ثبت‌نام
+    </h2>
+
+    <div
+      id="notification"
+      class="hidden"
+    ></div>
+
+    <form
+      id="registerForm"
+      class="w-full max-w-[400px] rounded-[10px] bg-white p-8 text-center shadow-[rgba(0,0,0,0.1)_0px_4px_12px]"
+    >
+      <input
+        type="text"
+        id="username"
+        placeholder="نام کاربری"
+        required
+        class="mb-4 w-full box-border rounded-[5px] border border-[#ddd] bg-[#f4f7f6] p-[15px] text-xs font-['IRANSans-web',sans-serif] outline-none transition focus:border-[#ff00a4] focus:shadow-[0_0_5px_#e00090]"
+      />
+
+      <input
+        type="password"
+        id="password"
+        placeholder="رمز عبور"
+        required
+        class="mb-4 w-full box-border rounded-[5px] border border-[#ddd] bg-[#f4f7f6] p-[15px] text-xs font-['IRANSans-web',sans-serif] outline-none transition focus:border-[#ff00a4] focus:shadow-[0_0_5px_#e00090]"
+      />
+
+      <button
+        type="submit"
+        class="w-full cursor-pointer rounded-[5px] border-0 bg-[#ff00a4] p-[15px] text-base text-white font-['IRANSans-web',sans-serif] transition-colors duration-300 hover:bg-[#e00090]"
+      >
+        ثبت‌نام
+      </button>
+    </form>
+
+    <p class="mt-[15px] text-center text-base">
+      حساب دارید؟
+      <a
+        href="login.html"
+        class="font-bold text-[#ff00a4] no-underline hover:underline"
+      >
+        ورود
+      </a>
+    </p>
+
+  </body>
+</html>
