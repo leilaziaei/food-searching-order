@@ -103,7 +103,7 @@ function displayMeals(meals) {
 // Basket
 // ======================================================
 
-function addToCart(id, title, price, pictur) {
+window.addToCart = function (id, title, price, pictur) {
   const userCart = loadUserCart();
 
   const exsitingItem = userCart.find((item) => item.id === id);
@@ -125,7 +125,7 @@ function addToCart(id, title, price, pictur) {
   updatCart();
 
   showNotification(`${title} به سبد خرید اضافه شد.`);
-}
+};
 
 // ======================================================
 // Save User Cart

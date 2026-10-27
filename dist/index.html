@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>جستجوی غذای آنلاین</title>
+
+    <!-- <link rel="stylesheet" href="./webfonts/iransans-web/iransans.css" /> -->
+    <script type="module" crossorigin src="/food-searching-order/assets/main-no_RAZsc.js"></script>
+    <link rel="modulepreload" crossorigin href="/food-searching-order/assets/style-BXThLmaq.js">
+    <link rel="stylesheet" crossorigin href="/food-searching-order/assets/style-BAtD_cl4.css">
+  </head>
+
+  <body
+    class="min-h-screen bg-gray-50 font-[IRANSans-web] text-[rgb(58,61,66)]"
+  >
+    <!-- ==================== HEADER ==================== -->
+
+    <header
+      class="fixed inset-x-0 top-0 z-[1000] bg-white py-2.5 shadow-[rgba(58,61,66,0.06)_0_1px_0,rgba(0,0,0,0.05)_0_2px_8px_-2px]"
+    >
+      <nav
+        class="mx-auto flex w-[94%] max-w-[1600px] items-center justify-between gap-3 lg:w-[90%]"
+      >
+        <!-- Logo -->
+        <div class="logo shrink-0">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="68"
+            height="34"
+            viewBox="0 0 56 28"
+            fill="none"
+            role="button"
+            tabindex="0"
+            class="h-[34px] w-[68px]"
+          >
+            <path
+              d="M51.2573 12.569C50.09 12.5709 49.4104 11.7833 49.4087 10.758C49.407 9.76415 50.084 8.92704 51.2513 8.92505C52.4186 8.92316 53.0983 9.75807 53.0999 10.7518C53.1016 11.7772 52.4246 12.567 51.2573 12.569Z"
+              fill="#FF00A6"
+            />
+            <path
+              d="M51.3587 1.0703H51.5032V0.407269H51.2702L51.1208 0.799469L50.9715 0.407269H50.7385V1.0703H50.8828V0.535313H50.8861L51.0781 1.0703H51.1635L51.3555 0.535313H51.3587V1.0703Z"
+              fill="#FF00A6"
+            />
+            <path
+              d="M50.4562 0.535313H50.658V0.407269H50.0951V0.535313H50.297V1.0703H50.4562V0.535313Z"
+              fill="#FF00A6"
+            />
+            <path
+              d="M50.2727 8.04699H51.909C52.7008 8.04699 53.3924 7.5112 53.5902 6.74444L55.2156 0.432777C55.2189 0.419923 55.2091 0.407269 55.1957 0.407269H52.2565C52.2473 0.407269 52.2391 0.413547 52.2368 0.422615L50.2727 8.04699Z"
+              fill="#FF00A6"
+            />
+
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M42.3678 5.12392C42.3565 5.12392 42.3474 5.11476 42.3474 5.1035V4.22942C42.3474 4.21816 42.3383 4.20899 42.327 4.20899H39.4968C39.4855 4.20899 39.4764 4.21816 39.4764 4.22942V15.6938C39.4764 15.705 39.4855 15.7142 39.4968 15.7142H40.6382C41.5822 15.7142 42.3474 14.949 42.3474 14.005V11.5823C42.3474 11.5635 42.3704 11.5549 42.3831 11.5688C42.9994 12.2509 43.9426 12.5695 44.8556 12.5695C47.2533 12.5695 48.9097 10.6135 48.9097 8.27885C48.9097 5.95994 47.2376 3.94085 44.824 3.94085C43.8811 3.94085 42.9069 4.31651 42.3849 5.11476C42.3812 5.12044 42.3746 5.12392 42.3678 5.12392ZM44.0984 10.0771C42.931 10.0771 42.2528 9.28845 42.2528 8.26311C42.2528 7.26926 42.931 6.43325 44.0984 6.43325C45.2657 6.43325 45.944 7.26926 45.944 8.26311C45.944 9.28845 45.2657 10.0771 44.0984 10.0771Z"
+              fill="#FF00A6"
+            />
+
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M32.3982 5.12392C32.3869 5.12392 32.3777 5.11476 32.3777 5.1035V4.20899H29.5068V15.7142H30.6685C31.6126 15.7142 32.3777 14.949 32.3777 14.005V11.5354C32.3777 11.533 32.3807 11.5318 32.3823 11.5337C32.9977 12.2399 33.9576 12.5695 34.886 12.5695C37.2837 12.5695 38.94 10.6135 38.94 8.27885C38.94 5.95994 37.268 3.94085 34.8544 3.94085C33.9115 3.94085 32.9373 4.31651 32.4153 5.11476C32.4115 5.12044 32.405 5.12392 32.3982 5.12392ZM34.1288 10.0771C32.9614 10.0771 32.2831 9.28845 32.2831 8.26311C32.2831 7.26926 32.9614 6.43325 34.1288 6.43325C35.2961 6.43325 35.9744 7.26926 35.9744 8.26311C35.9744 9.28845 35.2961 10.0771 34.1288 10.0771Z"
+              fill="#FF00A6"
+            />
+
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M25.7781 12.3014H26.9194C27.8633 12.3014 28.6286 11.5361 28.6286 10.5921V4.22942C28.6286 4.21816 28.6195 4.20899 28.6082 4.20899H25.7781C25.7668 4.20899 25.7577 4.21816 25.7577 4.22942V4.94287C25.7577 4.9618 25.7344 4.97037 25.7218 4.95622C25.1197 4.27436 24.1619 3.94085 23.2495 3.94085C20.8517 3.94085 19.1954 5.92845 19.1954 8.24727C19.1954 10.5662 20.8833 12.5695 23.281 12.5695C24.2238 12.5695 25.2135 12.2096 25.7201 11.4117C25.7239 11.4058 25.7303 11.4022 25.7372 11.4022C25.7485 11.4022 25.7577 11.4114 25.7577 11.4226V12.281C25.7577 12.2922 25.7668 12.3014 25.7781 12.3014ZM24.0066 10.0771C22.8394 10.0771 22.161 9.28845 22.161 8.26311C22.161 7.26926 22.8394 6.43325 24.0066 6.43325C25.174 6.43325 25.8523 7.26926 25.8523 8.26311C25.8523 9.28845 25.174 10.0771 24.0066 10.0771Z"
+              fill="#FF00A6"
+            />
+
+            <path
+              d="M13.0077 5.25007C12.9964 5.25007 12.9873 5.241 12.9873 5.22964V4.22942C12.9873 4.21816 12.9782 4.20899 12.9668 4.20899H10.1368C10.1255 4.20899 10.1163 4.21816 10.1163 4.22942V12.281C10.1163 12.2922 10.1255 12.3014 10.1368 12.3014H11.2782C12.2221 12.3014 12.9873 11.5362 12.9873 10.5922V8.10538C12.9873 7.09578 13.3186 6.22818 14.4859 6.22818C15.8027 6.22818 15.7896 7.3951 15.7808 8.18111C15.7801 8.24258 15.7794 8.30171 15.7794 8.35777V12.281C15.7794 12.2922 15.7886 12.3014 15.7998 12.3014H16.9413C17.8852 12.3014 18.6504 11.5362 18.6504 10.5922V7.30085C18.6504 5.31325 17.7828 3.94085 15.6059 3.94085C14.4893 3.94085 13.6863 4.27008 13.0249 5.24121C13.0212 5.24669 13.0145 5.25007 13.0077 5.25007Z"
+              fill="#FF00A6"
+            />
+
+            <path
+              d="M6.61553 2.80052C7.40571 3.03429 8.25049 2.67686 8.62665 1.94378L9.06608 1.08744C9.07116 1.07758 9.06757 1.06562 9.05801 1.06014C8.00238 0.466359 6.54468 0.0917969 5.35224 0.0917969C2.97035 0.0917969 1.25089 1.66926 1.25089 4.08274C1.25089 6.38592 2.52863 6.89071 4.4689 7.44284C4.50035 7.45182 4.53304 7.46106 4.56679 7.47058C5.24401 7.6618 6.34609 7.97298 6.34609 8.7994C6.34609 9.63551 5.57315 9.99831 4.84744 9.99831C3.79062 9.99831 2.87569 9.44619 2.10275 8.76791L0.786149 11.2442C0.781366 11.2533 0.784056 11.2648 0.792526 11.2707C2.0043 12.1163 3.46548 12.6169 4.95795 12.6169C6.15677 12.6169 7.40302 12.2856 8.33369 11.4969C9.28021 10.6923 9.5641 9.47778 9.5641 8.2946C9.5641 6.37007 8.28636 5.53406 6.63008 5.04501L5.8413 4.80845L5.83558 4.8066C5.29909 4.63297 4.4689 4.36427 4.4689 3.67261C4.4689 3.01007 5.22609 2.67886 5.79396 2.67886C6.07426 2.67886 6.35028 2.7221 6.61553 2.80052Z"
+              fill="#FF00A6"
+            />
+
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M38.2256 27.6413V14.5484H35.3546V20.3377C34.7552 19.6278 33.7771 19.2808 32.8465 19.2808C30.4487 19.2808 28.7924 21.2684 28.7924 23.5873C28.7924 25.9061 30.4803 27.9094 32.878 27.9094C33.8245 27.9094 34.8182 27.5466 35.323 26.7421H35.3546V27.6413H38.2256ZM33.6037 21.7731C34.771 21.7731 35.4493 22.6092 35.4493 23.603C35.4493 24.6283 34.771 25.4171 33.6037 25.4171C32.4363 25.4171 31.7581 24.6283 31.7581 23.603C31.7581 22.6092 32.4363 21.7731 33.6037 21.7731Z"
+              fill="#FF00A6"
+            />
+
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M23.5605 27.9094C26.1633 27.9094 28.4348 26.3478 28.4348 23.603C28.4348 20.8425 26.1633 19.2808 23.5605 19.2808C20.9577 19.2808 18.6862 20.8425 18.6862 23.603C18.6862 26.3635 20.9735 27.9094 23.5605 27.9094ZM23.5605 21.7731C24.7278 21.7731 25.4061 22.6092 25.4061 23.603C25.4061 24.6283 24.7278 25.4171 23.5605 25.4171C22.3932 25.4171 21.7149 24.6283 21.7149 23.603C21.7149 22.6092 22.3932 21.7731 23.5605 21.7731Z"
+              fill="#FF00A6"
+            />
+
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M13.4681 27.9094C16.0708 27.9094 18.3424 26.3478 18.3424 23.603C18.3424 20.8425 16.0708 19.2808 13.4681 19.2808C10.8653 19.2808 8.59369 20.8425 8.59369 23.603C8.59369 26.3635 10.881 27.9094 13.4681 27.9094ZM13.4681 21.7731C14.6353 21.7731 15.3137 22.6092 15.3137 23.603C15.3137 24.6283 14.6353 25.4171 13.4681 25.4171C12.3007 25.4171 11.6225 24.6283 11.6225 23.603C11.6225 22.6092 12.3007 21.7731 13.4681 21.7731Z"
+              fill="#FF00A6"
+            />
+
+            <path
+              d="M4.79525 20.3535V18.3659H8.5339V15.7473H1.70349V27.6413H4.79525V22.972H8.18684V20.3535H4.79525Z"
+              fill="#FF00A6"
+            />
+          </svg>
+        </div>
+
+        <!-- Search -->
+        <form
+          id="searchForm"
+          class="flex h-12 w-full max-w-[420px] flex-1 overflow-hidden rounded-[10px] bg-[rgb(235,237,240)] sm:max-w-[400px] md:w-[29vw] md:flex-none lg:max-w-[440px]"
+        >
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="جستجو کن تا زودتر پیدا بشه ..."
+            required
+            class="min-w-0 flex-1 border-0 bg-[rgb(235,237,240)] px-3 py-2 text-xs font-[IRANSans-web] outline-none"
+          />
+
+          <button
+            type="submit"
+            class="shrink-0 bg-[#27ae60] px-4 py-2 text-xs text-white transition-colors duration-150 hover:bg-[#2ecc71] sm:px-5"
+          >
+            جستجو
+          </button>
+        </form>
+
+        <!-- Auth + Cart -->
+        <div class="flex shrink-0 items-center gap-3 sm:gap-5">
+          <div id="authSection"></div>
+
+          <div class="cart-icon relative flex cursor-pointer items-center">
+            <img
+              src="images/icon-basket.svg"
+              alt="سبد خرید"
+              id="cartIcon"
+              class="h-5 w-5"
+            />
+
+            <span
+              id="cartCount"
+              class="absolute left-4 bottom-4 flex h-4/5 w-4/5 text-center items-center justify-center rounded-full bg-[#ff00a6] p-1 text-lg text-white"
+            >
+              0
+            </span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ==================== MAIN ==================== -->
+
+    <main class="mx-auto w-full px-3 py-5 sm:px-5 lg:px-6">
+      <div class="mt-16 flex flex-col gap-5 lg:mt-20 lg:flex-row">
+        <!-- ==================== SIDEBAR ==================== -->
+
+        <aside
+          class="sidebar w-full shrink-0 rounded-lg bg-gray-50 p-4 shadow-[0_0_10px_rgba(0,0,0,0.1)] sm:p-5 lg:sticky lg:top-[90px] lg:h-[calc(100vh-110px)] lg:w-[250px] lg:overflow-y-auto"
+        >
+          <h3 class="mb-5 text-lg font-bold text-[#2c3e50]">فیلترها</h3>
+
+          <!-- Ingredient -->
+          <label for="ingredientSelect" class="mb-2.5 block text-sm font-bold">
+            فیلتر بر اساس مواد اولیه:
+          </label>
+
+          <select
+            id="ingredientSelect"
+            class="mb-5 w-full rounded border border-[#bdc3c7] bg-white px-2.5 py-2.5 text-sm font-[IRANSans-web] outline-none"
+          >
+            <option value="">انتخاب ماده اولیه</option>
+            <option value="Chicken">مرغ</option>
+            <option value="Beef">گوشت</option>
+            <option value="Rice">برنج</option>
+          </select>
+
+          <!-- Category -->
+          <label for="categorySelect" class="mb-2.5 block text-sm font-bold">
+            فیلتر بر اساس دسته‌بندی:
+          </label>
+
+          <select
+            id="categorySelect"
+            class="mb-5 w-full rounded border border-[#bdc3c7] bg-white px-2.5 py-2.5 text-sm font-[IRANSans-web] outline-none"
+          >
+            <option value="">انتخاب دسته‌بندی</option>
+            <option value="Seafood">غذاهای دریایی</option>
+            <option value="Vegetarian">گیاهی</option>
+            <option value="Dessert">دسر</option>
+            <option value="Lamb">گوشت بره</option>
+            <option value="Pasta">پاستا</option>
+            <option value="Pork">گوشت خوک</option>
+            <option value="Side">ساید</option>
+            <option value="Starter">پیش غذا</option>
+            <option value="Vegan">وگان</option>
+            <option value="Breakfast">صبحانه</option>
+            <option value="Goat">گوشت بز</option>
+            <option value="Miscellaneous">متفرقه</option>
+          </select>
+
+          <!-- Clear Filters -->
+          <button
+            id="clearFilters"
+            class="flex w-full items-center justify-between rounded-[5px] bg-white px-3.5 py-2.5 text-xs text-[rgb(58,61,66)] shadow-[rgba(58,61,66,0.06)_0_1px_0,rgba(0,0,0,0.2)_0_4px_16px_-8px] transition hover:bg-gray-50"
+          >
+            <span>پاک کردن فیلترها</span>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              width="20"
+              height="20"
+              class="h-5 w-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0"
+              />
+            </svg>
+          </button>
+        </aside>
+
+        <!-- Notification -->
+        <div id="notification"></div>
+
+        <!-- ==================== CART MODAL ==================== -->
+
+        <div
+          id="cartModal"
+          class="fixed inset-0 z-[1000] hidden h-full w-full overflow-auto bg-black/80"
+        >
+          <div
+            class="mx-auto mt-[12vh] w-[94%] max-w-[700px] rounded bg-white p-4 sm:w-[90%] sm:p-5"
+          >
+            <!-- Modal Header -->
+            <div
+              class="flex items-center justify-between bg-[#ff00a6] px-3 py-2.5 text-sm text-white"
+            >
+              <h2 class="m-0 text-base">سبد خرید</h2>
+
+              <span
+                id="closeModal"
+                class="cursor-pointer text-[#aaa] hover:text-black"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="3"
+                  stroke="currentColor"
+                  class="h-5 w-5 text-white"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18 18 6M6 6l12 12"
+                  />
+                </svg>
+              </span>
+            </div>
+
+            <!-- Cart Table -->
+            <div class="mt-4 w-full overflow-x-auto">
+              <table
+                class="w-full min-w-[620px] table-fixed border-collapse rounded-lg border border-[rgb(235,237,240)] text-sm"
+              >
+                <thead>
+                  <tr>
+                    <th class="bg-[#f5f5f5] p-3 text-center">تصویر</th>
+                    <th class="bg-[#f5f5f5] p-3 text-center">نام</th>
+                    <th class="bg-[#f5f5f5] p-3 text-center">قیمت</th>
+                    <th class="bg-[#f5f5f5] p-3 text-center">تعداد</th>
+                    <th class="bg-[#f5f5f5] p-3 text-center">مجموع</th>
+                    <th class="bg-[#f5f5f5] p-3 text-center">عملیات</th>
+                  </tr>
+                </thead>
+
+                <tbody id="cartItems"></tbody>
+              </table>
+            </div>
+
+            <!-- Total -->
+            <div
+              class="mt-4 flex flex-col-reverse items-stretch justify-between gap-4 sm:flex-row sm:items-center"
+            >
+              <div id="cartTotal" class="text-right text-base font-bold"></div>
+
+              <button
+                id="checkoutButton"
+                class="items-center justify-center bg-[#f1f9f4] px-4 py-2.5 text-xs text-[#22a958]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="mr-1 inline-block h-5 w-5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.746 3.746 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.746 3.746 0 0 1 1.043-3.296A3.745 3.745 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.745 3.745 0 0 1 3.296 1.043 3.745 3.745 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"
+                  />
+                </svg>
+
+                تکمیل سفارش
+              </button>
+            </div>
+
+            <p
+              id="loginReminder"
+              class="mt-2.5 text-center text-sm text-[#a94442]"
+            >
+              لطفا برای تکمیل سفارش به سایت لاگین کنید
+            </p>
+          </div>
+        </div>
+
+        <!-- ==================== MAIN CONTENT ==================== -->
+
+        <section class="main-content min-w-0 flex-1">
+          <!-- Region Search -->
+          <section
+            class="region-search mt-2.5 w-full text-center sm:mt-5"
+            id="regionSearch"
+          >
+            <h3 class="mb-3 text-base font-bold sm:mb-4 sm:text-lg">
+              جستجو براساس ناحیه جغرافیایی
+            </h3>
+            <div
+              class="region-buttons flex w-full items-center justify-center gap-2 sm:gap-3 md:gap-3 lg:gap-4 xl:gap-5"
+            >
+              <!-- France -->
+              <div
+                data-region="French"
+                class="group min-w-0 flex-1 cursor-pointer overflow-hidden rounded-lg border border-[#e7e8e9] bg-gray-50 text-[10px] font-bold shadow-sm transition hover:-translate-y-0.5 hover:shadow-md sm:max-w-[150px] sm:rounded-xl sm:text-xs md:max-w-[160px] lg:max-w-[175px] xl:max-w-[184px]"
+              >
+                <img
+                  src="/food-searching-order/assets/france-U_cbBGns.jpg"
+                  alt="france flag"
+                  class="block aspect-[1.35/1] w-full object-cover"
+                />
+                <div class="px-1 py-1.5 sm:px-1.5 sm:py-2">فرانسوی</div>
+              </div>
+              <!-- Canada -->
+              <div
+                data-region="Canadian"
+                class="group min-w-0 flex-1 cursor-pointer overflow-hidden rounded-lg border border-[#e7e8e9] bg-gray-50 text-[10px] font-bold shadow-sm transition hover:-translate-y-0.5 hover:shadow-md sm:max-w-[150px] sm:rounded-xl sm:text-xs md:max-w-[160px] lg:max-w-[175px] xl:max-w-[184px]"
+              >
+                <img
+                  src="/food-searching-order/assets/canada-Dubt495f.jpg"
+                  alt="canada flag"
+                  class="block aspect-[1.35/1] w-full object-cover"
+                />
+                <div class="px-1 py-1.5 sm:px-1.5 sm:py-2">کانادایی</div>
+              </div>
+              <!-- Japan -->
+              <div
+                data-region="Japanese"
+                class="group min-w-0 flex-1 cursor-pointer overflow-hidden rounded-lg border border-[#e7e8e9] bg-gray-50 text-[10px] font-bold shadow-sm transition hover:-translate-y-0.5 hover:shadow-md sm:max-w-[150px] sm:rounded-xl sm:text-xs md:max-w-[160px] lg:max-w-[175px] xl:max-w-[184px]"
+              >
+                <img
+                  src="/food-searching-order/assets/Japan-CRD7J-aU.jpg"
+                  alt="Japan flag"
+                  class="block aspect-[1.35/1] w-full object-cover"
+                />
+                <div class="px-1 py-1.5 sm:px-1.5 sm:py-2">ژاپنی</div>
+              </div>
+              <!-- Italy -->
+              <div
+                data-region="Italian"
+                class="group min-w-0 flex-1 cursor-pointer overflow-hidden rounded-lg border border-[#e7e8e9] bg-gray-50 text-[10px] font-bold shadow-sm transition hover:-translate-y-0.5 hover:shadow-md sm:max-w-[150px] sm:rounded-xl sm:text-xs md:max-w-[160px] lg:max-w-[175px] xl:max-w-[184px]"
+              >
+                <img
+                  src="/food-searching-order/assets/italy-DiVOU73F.jpg"
+                  alt="italy flag"
+                  class="block aspect-[1.35/1] w-full object-cover"
+                />
+                <div class="px-1 py-1.5 sm:px-1.5 sm:py-2">ایتالیایی</div>
+              </div>
+              <!-- Spain -->
+              <div
+                data-region="Spanish"
+                class="group min-w-0 flex-1 cursor-pointer overflow-hidden rounded-lg border border-[#e7e8e9] bg-gray-50 text-[10px] font-bold shadow-sm transition hover:-translate-y-0.5 hover:shadow-md sm:max-w-[150px] sm:rounded-xl sm:text-xs md:max-w-[160px] lg:max-w-[175px] xl:max-w-[184px]"
+              >
+                <img
+                  src="/food-searching-order/assets/spania-C3KUFUBN.jpg"
+                  alt="spania flag"
+                  class="block aspect-[1.35/1] w-full object-cover"
+                />
+                <div class="px-1 py-1.5 sm:px-1.5 sm:py-2">اسپانیایی</div>
+              </div>
+              <!-- China -->
+              <div
+                data-region="Chinese"
+                class="group min-w-0 flex-1 cursor-pointer overflow-hidden rounded-lg border border-[#e7e8e9] bg-gray-50 text-[10px] font-bold shadow-sm transition hover:-translate-y-0.5 hover:shadow-md sm:max-w-[150px] sm:rounded-xl sm:text-xs md:max-w-[160px] lg:max-w-[175px] xl:max-w-[184px]"
+              >
+                <img
+                  src="/food-searching-order/assets/china-5CtfSEGq.jpg"
+                  alt="china flag"
+                  class="block aspect-[1.35/1] w-full object-cover"
+                />
+                <div class="px-1 py-1.5 sm:px-1.5 sm:py-2">چینی</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ==================== MEAL LIST ==================== -->
+
+          <section
+            id="mealList"
+            class="meal-list mb-10 mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4 lg:gap-5 2xl:grid-cols-5"
+          ></section>
+        </section>
+      </div>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+
+    <footer
+      class="mt-8 bg-[#1b1c1d] px-0 py-2.5 text-center text-xs text-white"
+    >
+      <p>© 2024 Online Food Search. همه حقوق محفوظ است.</p>
+    </footer>
+
+  </body>
+</html>
