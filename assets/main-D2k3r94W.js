@@ -122,7 +122,7 @@ import"./style-Ck7b6V15.js";var e=`https://www.themealdb.com/api/json/v1/1/`,t=[
           سبد خرید شما خالی است.
         </td>
       </tr>
-    `,a.classList.add(`hidden`);return}}function u(){let e=document.querySelector(`#authSection`);localStorage.getItem(`token`)?(e.innerHTML=`
+    `,a.classList.add(`hidden`);return}}window.removeCart=function(e){let t=s();t.splice(e,1),o(t),l(),c()};function u(){let e=document.querySelector(`#authSection`);localStorage.getItem(`token`)?(e.innerHTML=`
       <div class="user-menu-container">
 
         <img
