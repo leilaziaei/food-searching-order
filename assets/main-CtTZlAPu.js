@@ -1,4 +1,4 @@
-import"./style-_O7HtN2m.js";var e=`https://www.themealdb.com/api/json/v1/1/`,t=[];function n(e){return e.map(e=>(e.price=Math.floor(Math.random()*61)+10,e))}async function r(e){try{let r=await(await fetch(`${e}search.php?s=`)).json();return t=n(r.meals||[]),a(t),r}catch(e){console.error(`Error fetching meals:`,e)}}function i(e){let t=[`۰`,`۱`,`۲`,`۳`,`۴`,`۵`,`۶`,`۷`,`۸`,`۹`];return e.toString().replace(/\d/g,e=>t[e])}function a(e){let t=document.querySelector(`#mealList`);t.innerHTML=``,e.forEach(e=>{let n=`
+import"./style-Div36ASt.js";var e=`https://www.themealdb.com/api/json/v1/1/`,t=[];function n(e){return e.map(e=>(e.price=Math.floor(Math.random()*61)+10,e))}async function r(e){try{let r=await(await fetch(`${e}search.php?s=`)).json();return t=n(r.meals||[]),a(t),r}catch(e){console.error(`Error fetching meals:`,e)}}function i(e){let t=[`۰`,`۱`,`۲`,`۳`,`۴`,`۵`,`۶`,`۷`,`۸`,`۹`];return e.toString().replace(/\d/g,e=>t[e])}function a(e){let t=document.querySelector(`#mealList`);t.innerHTML=``,e.forEach(e=>{let n=`
       <div
         class="meal mb-8 flex h-[300px] w-full cursor-pointer flex-col items-center justify-between overflow-hidden rounded-lg border border-[rgba(58,61,66,0.06)] bg-white pb-6 text-center shadow-md transition duration-200 ease-out hover:shadow-xl"
       >
@@ -28,69 +28,78 @@ import"./style-_O7HtN2m.js";var e=`https://www.themealdb.com/api/json/v1/1/`,t=[
 
       </div>
     `;t.innerHTML+=n})}window.addToCart=function(e,t,n,r){let i=s(),a=i.find(t=>t.id===e);a?a.quantity+=1:i.push({id:e,title:t,price:n,pictur:r,quantity:1}),o(i),c(),d(`${t} به سبد خرید اضافه شد.`)};function o(e){let t=localStorage.getItem(`loggedUser`);localStorage.setItem(`Cart_${t}`,JSON.stringify(e))}function s(){let e=localStorage.getItem(`loggedUser`);return JSON.parse(localStorage.getItem(`Cart_${e}`))||[]}function c(){let e=s().reduce((e,t)=>e+t.quantity,0),t=document.querySelector(`#cartCount`);t.textContent=i(e)}function l(){let e=s(),t=document.querySelector(`#cartItems`),n=document.querySelector(`#loginReminder`),r=document.querySelector(`#cartTotal`),a=document.querySelector(`#checkoutButton`);t.innerHTML=``;let o=0;if(e.forEach((e,n)=>{t.innerHTML+=`
-      <tr>
+      <tr
+        class="mb-3 grid grid-cols-[64px_1fr_auto] items-center gap-x-3 gap-y-2 rounded-lg border border-[#ebedf0] bg-white p-3 shadow-sm sm:mb-0 sm:table-row sm:rounded-none sm:border-0 sm:p-0 sm:shadow-none"
+      >
 
         <!-- تصویر -->
-        <td class="border-b border-[#ebedf0] p-3 text-center">
+        <td
+          class="row-span-3 sm:row-auto sm:table-cell sm:border-b sm:border-[#ebedf0] sm:p-3 sm:text-center"
+        >
           <img
             src="${e.pictur}"
             alt="${e.title}"
-            class="mx-auto h-[50px] w-[50px] rounded-full object-cover"
+            class="h-16 w-16 rounded-full object-cover sm:mx-auto sm:h-[50px] sm:w-[50px]"
           />
         </td>
 
         <!-- نام -->
-        <td class="border-b border-[#ebedf0] p-3 text-center">
+        <td
+          class="text-sm font-bold sm:table-cell sm:border-b sm:border-[#ebedf0] sm:p-3 sm:text-center sm:font-normal"
+        >
           ${e.title}
         </td>
 
         <!-- قیمت -->
-        <td class="border-b border-[#ebedf0] p-3 text-center">
+        <td
+          class="col-span-2 text-xs text-gray-500 sm:table-cell sm:border-b sm:border-[#ebedf0] sm:p-3 sm:text-center sm:text-sm sm:text-inherit"
+        >
+          <span class="sm:hidden">قیمت واحد: </span>
           ${i(e.price)} دلار
         </td>
 
         <!-- تعداد -->
-        <td class="border-b border-[#ebedf0] p-3 text-center">
-
+        <td
+          class="sm:table-cell sm:border-b sm:border-[#ebedf0] sm:p-3 sm:text-center"
+        >
           <div
-            class="btns-modal mx-auto flex w-fit items-center justify-center gap-[10px] rounded-[3px] border border-[#e0e0e2] px-[10px] py-[5px] text-base text-[#42cb81]"
+            class="btns-modal flex w-fit items-center justify-center gap-[10px] rounded-[3px] border border-[#e0e0e2] px-[10px] py-[5px] text-base text-[#42cb81] sm:mx-auto"
           >
-
             <button
               onClick="changeQuantity('${n}', -1)"
-              class="cursor-pointer text-base"
+              class="cursor-pointer px-1 text-base sm:px-0"
             >
               -
             </button>
 
-            <span>
-              ${i(e.quantity)}
-            </span>
+            <span>${i(e.quantity)}</span>
 
             <button
               onClick="changeQuantity('${n}', +1)"
-              class="cursor-pointer text-base"
+              class="cursor-pointer px-1 text-base sm:px-0"
             >
               +
             </button>
-
           </div>
-
         </td>
 
-        <!-- مجموع -->
-        <td class="border-b border-[#ebedf0] p-3 text-center">
+        <!-- مجموع ردیف -->
+        <td
+          class="justify-self-end text-sm font-bold text-[#ff00a6] sm:table-cell sm:border-b sm:border-[#ebedf0] sm:p-3 sm:text-center sm:font-normal sm:text-inherit"
+        >
+          <span class="text-xs font-normal text-gray-500 sm:hidden">مجموع: </span>
           ${i(e.price*e.quantity)} دلار
         </td>
 
-        <!-- عملیات -->
-        <td class="border-b border-[#ebedf0] p-3 text-center">
-
+        <!-- حذف (آخرین ستون) -->
+        <td
+          class="col-start-3 row-start-1 justify-self-end sm:table-cell sm:border-b sm:border-[#ebedf0] sm:p-3 sm:text-center"
+        >
           <button
             onClick="removeCart('${n}')"
             class="cursor-pointer text-[#333] transition-colors hover:text-[rgb(250,40,75)]"
+            aria-label="حذف"
           >
-
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -99,25 +108,21 @@ import"./style-_O7HtN2m.js";var e=`https://www.themealdb.com/api/json/v1/1/`,t=[
               stroke="currentColor"
               class="size-5"
             >
-
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m0 0a48.11 48.11 0 0 1 3.478.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0"
+                d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0"
               />
-
             </svg>
-
           </button>
-
         </td>
 
       </tr>
     `,o+=e.price*e.quantity}),localStorage.getItem(`token`)?(n.classList.add(`hidden`),r.textContent=`مجموع خرید: ${i(o)} دلار`,a.classList.remove(`hidden`)):(n.classList.remove(`hidden`),r.textContent=`مجموع خرید: ${i(o)} دلار`,a.classList.add(`hidden`)),e.length===0){t.innerHTML=`
-      <tr>
+      <tr class="block sm:table-row">
         <td
           colspan="6"
-          class="text-center align-middle text-[20px] h-[100px]"
+          class="block h-[100px] text-center align-middle text-[20px] leading-[100px] sm:table-cell sm:leading-normal"
         >
           سبد خرید شما خالی است.
         </td>

@@ -7,9 +7,9 @@
     <title>جستجوی غذای آنلاین</title>
 
     <!-- <link rel="stylesheet" href="./webfonts/iransans-web/iransans.css" /> -->
-    <script type="module" crossorigin src="/food-searching-order/assets/main-CVxXdVWU.js"></script>
-    <link rel="modulepreload" crossorigin href="/food-searching-order/assets/style-_O7HtN2m.js">
-    <link rel="stylesheet" crossorigin href="/food-searching-order/assets/style-B1LnU6uS.css">
+    <script type="module" crossorigin src="/food-searching-order/assets/main-CtTZlAPu.js"></script>
+    <link rel="modulepreload" crossorigin href="/food-searching-order/assets/style-Div36ASt.js">
+    <link rel="stylesheet" crossorigin href="/food-searching-order/assets/style-CSuU6Yda.css">
   </head>
 
   <body
@@ -114,14 +114,14 @@
         <!-- Search -->
         <form
           id="searchForm"
-          class="flex h-8 sm:h-12 w-[90%]  max-w-[500px] flex-1 overflow-hidden rounded-[10px] bg-[rgb(235,237,240)] sm:max-w-[400px] md:w-[29vw] md:flex-none lg:max-w-[440px] absolute top-[60px] sm:static justify-center"
+          class="flex h-8 sm:h-12 w-[90%] max-w-[500px] flex-1 overflow-hidden rounded-[10px] bg-[rgb(235,237,240)] sm:max-w-[400px] md:w-[29vw] md:flex-none lg:max-w-[440px] absolute top-[60px] sm:static justify-center"
         >
           <input
             type="text"
             id="searchInput"
             placeholder="جستجو کن تا زودتر پیدا بشه ..."
             required
-            class="min-w-0  flex-1 border-0 bg-[rgb(235,237,240)]  px-3 py-2 text-xs font-[IRANSans-web] outline-none"
+            class="min-w-0 flex-1 border-0 bg-[rgb(235,237,240)] px-3 py-2 text-xs font-[IRANSans-web] outline-none"
           />
 
           <button
@@ -271,11 +271,11 @@
             </div>
 
             <!-- Cart Table -->
-            <div class="mt-4 w-full overflow-x-auto">
+            <div class="mt-4 w-full sm:overflow-x-auto">
               <table
-                class="w-full min-w-[620px] table-fixed border-collapse rounded-lg border border-[rgb(235,237,240)] text-sm"
+                class="block w-full border-collapse text-sm sm:table sm:min-w-[620px] sm:table-fixed sm:rounded-lg sm:border sm:border-[rgb(235,237,240)]"
               >
-                <thead>
+                <thead class="hidden sm:table-header-group">
                   <tr>
                     <th class="bg-[#f5f5f5] p-3 text-center">تصویر</th>
                     <th class="bg-[#f5f5f5] p-3 text-center">نام</th>
@@ -286,7 +286,7 @@
                   </tr>
                 </thead>
 
-                <tbody id="cartItems"></tbody>
+                <tbody id="cartItems" class="block sm:table-row-group"></tbody>
               </table>
             </div>
 
